@@ -32,9 +32,9 @@ int app_main(void)
 
     esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_bt_controller_init(&bt_cfg));
-    ESP_ERROR_CHECK(esp_bt_controller_enable(ESP_BT_MODE_BTDM));
+    ESP_ERROR_CHECK(esp_bt_controller_enable(ESP_BT_MODE_BLE));
 
-    ESP_LOGI(TAG, "%d bps, tx: 5, rx: 18, rts: 19, cts: 23", CONFIG_BT_HCI_UART_BAUDRATE);
+    ESP_LOGI(TAG, "%d bps, tx: 5, rx: 18, rts: 19, cts: 23", CONFIG_BTDM_CTRL_HCI_UART_BAUDRATE);
 
     return 0;
 }
